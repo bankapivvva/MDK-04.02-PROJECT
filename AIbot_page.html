@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile_page-style.css">
+    <link rel = "stylesheet" href = "AIbot_page-style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="chat-avatar">
+                AI
+            </div>
+            <div>
+                <h1 class="chat-title">ИИ-помощник Aegis</h1>
+                <p class="chat-subtitle">Анализ и редактирование документов с помощью искусственного интеллекта</p>
+            </div>
+        </header>
+        
+        <div class="chat-history">
+            <div class="message message-ai">
+                <div class="message-header">
+                    <span class="message-sender">ИИ-помощник Aegis</span>
+                    <span class="message-time">14:25</span>
+                </div>
+                <div class="message-text">
+                    Здравствуйте! Я ваш ИИ-помощник для работы с документами. Я могу помочь вам:
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Проанализировать документ и предложить улучшения</li>
+                        <li>Исправить грамматические и стилистические ошибки</li>
+                        <li>Улучшить структуру и оформление документа</li>
+                        <li>Сгенерировать текст по вашим требованиям</li>
+                        <li>Перевести документ на другой язык</li>
+                    </ul>
+                    С чего начнем работу?
+                </div>
+            </div>
+            
+            <div class="message message-user">
+                <div class="message-header">
+                    <span class="message-sender">Вы</span>
+                    <span class="message-time">14:27</span>
+                </div>
+                <div class="message-text">
+                    Проанализируй мой отчет по лабораторной работе и предложи улучшения структуры.
+                </div>
+            </div>
+            
+            <div class="message message-ai">
+                <div class="message-header">
+                    <span class="message-sender">ИИ-помощник Aegis</span>
+                    <span class="message-time">14:28</span>
+                </div>
+                <div class="message-text">
+                    Я проанализировал ваш документ "Отчет по лабораторной работе". Вот мои рекомендации:
+                    <br><br>
+                    1. Добавить оглавление с указанием страниц
+                    <br>
+                    2. В разделе "Методология" добавить схемы эксперимента
+                    <br>
+                    3. Объединить таблицы данных в приложение
+                    <br>
+                    4. В "Выводах" добавить сравнение с теоретическими данными
+                    <br><br>
+                    Также я обнаружил и исправил 8 грамматических ошибок и унифицировал оформление заголовков.
+                    <br><br>
+                    Хотите применить эти изменения к документу?
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <textarea class="chat-input" placeholder="Введите ваш запрос для ИИ-помощника..."></textarea>
+            <button class="chat-send-btn">Отправить</button>
+        </div>
+        
+        <div class="chat-actions">
+            <button class="action-btn">Анализ документа</button>
+            <button class="action-btn">Исправить ошибки</button>
+            <button class="action-btn">Улучшить стиль</button>
+            <button class="action-btn">Сгенерировать текст</button>
+            <button class="action-btn">Перевести</button>
+        </div>
+        
+        <div class="back-btn-container">
+            <a href="main_page.html" class="back-btn">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>

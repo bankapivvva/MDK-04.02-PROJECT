@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "newsighup-style.css">
+        <link rel = "stylesheet" href = "login_page-style.css">
+    </head>
+    <body>
+        <div class="registration-wrapper">
+            <div class="side-panel"></div>
+            <div class="center-panel">
+                <div class="registration-screen">
+                    <h1 class="welcome-title">Регистрация</h1>
+                    <p class="welcome-subtitle">
+                        Заполните поля, чтобы продолжить.
+                    </p>
+                    <form action = "registration_end.html" method="get">
+                        <label for = "pole1" class = "input-title">Придумайте логин</label>
+                        <input type="text" class="form-input" placeholder="Введите ваш логин..." id = "pole1" required minlength="5" maxlength="30"
+                        pattern="^[A-Za-zА-Яа-яЁё0-9\s!@#$%^&*()_\-+=\[\]{}|;:',\.\/?~`]+$">
+                        <label for = "pole2" class = "input-title">Введите вашу почту</label>
+                        <input type="email" class="form-input" placeholder="Введите вашу электронную почту..." id = "pole2" required minlength="19" maxlength="50"
+                        pattern="^[A-Za-z0-9!@#$%^&*()_\-+=\[\]{}|;:',\.\/?~`]+$">
+                        <label for = "pole3" class = "input-title">Придумайте пароль</label>
+                        <input type="password" class="form-input" placeholder="Введите пароль..." id = "pole3" required minlength="5" maxlength="20"
+                        pattern="^[A-Za-z0-9]+$">
+                        <label for = "pole3" class = "input-title">Подтвердите пароль</label>
+                        <input type="password" class="form-input" placeholder="Введите пароль..." id = "pole4" required minlength="5" maxlength="20"
+                        pattern="^[A-Za-z0-9]+$">
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="policy-checkbox" id="policy-check" required>
+                            <label for="policy-check" class="checkbox-label">Согласен с политикой обработки персональных данных</label>
+                        </div>
+                        <button type = "submit" class = "login-button">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="side-panel"></div>
+        </div>
+        <script>
+            const password = document.getElementById("pole3");
+            const confirmPassword = document.getElementById("pole4");
+            function validatePassword(){
+            if(password.value !== confirmPassword.value) {
+                // Если не совпадают — выводим кастомную ошибку
+                confirmPassword.setCustomValidity("Пароли не совпадают");
+            } else {
+                // Если совпадают — очищаем ошибку, форма отправится
+                confirmPassword.setCustomValidity('');
+            }
+            }
+            // Запускаем проверку при вводе в оба поля
+            password.onchange = validatePassword;
+            confirmPassword.onkeyup = validatePassword;
+        </script>
+    </body>
+</html>

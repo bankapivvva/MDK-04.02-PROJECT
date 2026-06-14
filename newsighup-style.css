@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Unbounded:wght@200..900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Geist", "Unbounded", sans-serif;
+   background-color: white;
+   color: #333;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.registration-wrapper {
+   display: flex;
+   width: 100%;
+   max-width: 1200px;
+   height: auto;
+   min-height: 700px;
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Боковые панели с космическим фоном */
+.side-panel {
+   flex: 1;
+   background-color: black;
+   background-image:
+      radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+      radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+      radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+      radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+/* Центральная панель с контентом */
+.center-panel {
+   flex: 2;
+   background-color: white;
+   padding: 40px 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+
+/* Общие стили для всех экранов */
+.registration-screen {
+   width: 100%;
+   max-width: 500px;
+   text-align: center;
+   padding: 20px 0;
+}
+
+/* Стили для экрана приветствия */
+.welcome-logo {
+   width: 120px;
+   height: 120px;
+   background-color: black;
+   background-image:
+      radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+      radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+      radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+      radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+   border-radius: 50%;
+   margin: 0 auto 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 40px;
+   font-weight: bold;
+   color: white;
+   font-family: "Unbounded", sans-serif;
+}
+
+.welcome-title {
+   font-size: 32px;
+   color: #222;
+   font-family: "Unbounded", sans-serif;
+   line-height: 1.3;
+   margin-bottom: 10px;
+}
+
+.welcome-subtitle {
+   font-size: 16px;
+   color: #666;
+   margin-bottom: 40px;
+   line-height: 1.5;
+   padding: 0 10px;
+}
+/* Общие стили для кнопок */
+.btn {
+   display: inline-block;
+   padding: 14px 30px;
+   background-color: black;
+   background-image:
+      radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+      radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+      radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+      radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+   border: none;
+   border-radius: 8px;
+   font-family: "Unbounded", sans-serif;
+   font-weight: bold;
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   text-align: center;
+   width: 100%;
+   max-width: 300px;
+   margin: 0 auto;
+}
+
+.btn:hover {
+   background-color: #1D76FB;
+}
+
+.link-back {
+   display: block;
+   margin-top: 25px;
+   color: #666;
+   text-decoration: none;
+   font-size: 14px;
+   transition: color 0.3s;
+   padding: 0 10px;
+}
+
+.link-back:hover {
+   color: #1D76FB;
+}
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1190px) {
+   .registration-wrapper {
+      max-width: 900px;
+      min-height: 650px;
+   }
+
+   .center-panel {
+      padding: 30px 25px;
+   }
+
+   .welcome-title {
+      font-size: 26px;
+   }
+   .welcome-logo {
+      font-size: 36px;
+   }
+}
+
+/* Большие мобильные (576px - 768px) */
+@media (max-width: 768px) {
+   .registration-wrapper {
+      flex-direction: column;
+      border-radius: 15px;
+      min-height: auto;
+   }
+
+   .side-panel {
+      display: none;
+   }
+
+   .center-panel {
+      padding: 30px 20px;
+      width: 100%;
+   }
+
+   .welcome-title {
+      font-size: 20px;
+      margin-bottom: 12px;
+   }
+
+   .welcome-subtitle {
+      font-size: 15px;
+      margin-bottom: 35px;
+   }
+   .btn {
+      padding: 13px 25px;
+      font-size: 15px;
+      max-width: 280px;
+   }
+
+   .link-back {
+      font-size: 13px;
+      margin-top: 20px;
+   }
+   .welcome-logo {
+      font-size: 32px;
+   }
+}
+
+/* Мобильные (до 576px) */
+@media (max-width: 576px) {
+   body {
+      padding: 15px;
+   }
+
+   .registration-wrapper {
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+   }
+
+   .center-panel {
+      padding: 25px 15px;
+   }
+
+   .welcome-logo {
+      width: 90px;
+      height: 90px;
+      font-size: 28px;
+      margin-bottom: 20px;
+   }
+
+   .welcome-title {
+      font-size: 16px;
+      margin-bottom: 10px;
+   }
+
+   .welcome-subtitle {
+      font-size: 14px;
+      margin-bottom: 30px;
+      line-height: 1.4;
+   }
+
+   .btn {
+      padding: 12px 20px;
+      font-size: 14px;
+      max-width: 250px;
+      border-radius: 6px;
+   }
+
+   .link-back {
+      font-size: 12px;
+      margin-top: 18px;
+   }
+}
